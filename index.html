@@ -48,6 +48,8 @@
       overflow-x: auto;
       border-radius: 6px;
       font-size: 0.9rem;
+      white-space: pre-wrap;
+      word-wrap: break-word;
     }
     .meta {
       color: #9aa0aa;
@@ -69,6 +71,13 @@
       color: #8ab4f8;
       text-decoration: none;
     }
+    ul {
+      margin: 1rem 0;
+      padding-left: 1.5rem;
+    }
+    li {
+      margin: 0.5rem 0;
+    }
   </style>
 </head>
 <body>
@@ -87,22 +96,37 @@
     I design prompts for image and video generation that prioritize consistency,
     controllable outputs, and real-world use cases.
   </p>
-  <p class="meta">Tools: Image & Video Models · Prompt Engineering · Iterative Testing</p>
+  <p class="meta">Tools: Image & Video Models | Prompt Engineering | Iterative Testing</p>
 </section>
 
 <section>
   <h2>Image Prompt Examples</h2>
 
   <div class="card">
-    <h3>Product Studio Lighting</h3>
-    <p class="meta">Goal: Clean commercial-style product image</p>
-    <pre>Ultra-detailed studio photograph of a matte black water bottle,
-softbox lighting from left and right,
-neutral gray background,
-sharp focus, realistic reflections,
-commercial product photography</pre>
-    <p class="meta">Model: Image Generator · Aspect Ratio: 1:1</p>
-    <p class="meta">Notes: Lighting direction and material descriptors improve consistency.</p>
+    <h3>Magical Library Dream Scene</h3>
+    <p class="meta">Goal: Ethereal fantasy art with levitating elements and soft magical lighting</p>
+    <p><strong>Revised Prompt:</strong></p>
+    <pre>A young girl floats cross-legged mid-air in a magical, ethereal library, surrounded by a swirling vortex of levitating books. Soft pink and blue hues bathe the scene, creating a dreamlike atmosphere. The lighting is soft and diffused, with subtle glows emanating from the floating books, casting gentle shadows. The style is digital painting, reminiscent of fantasy art, with intricate details and a painterly finish, inspired by the works of Tran Nguyen and Lois van Baarle.</pre>
+    <p class="meta">Model: Midjourney/DALL-E | Style: Digital Fantasy Art | Mood: Dreamlike & Ethereal</p>
+    <p class="meta"><strong>Notes:</strong> The refined prompt emphasizes atmospheric lighting, specific artistic references, and clear color palette (pink/blue) to ensure consistent magical mood across generations.</p>
+  </div>
+
+  <div class="card">
+    <h3>Ancient Library Dark Atmosphere</h3>
+    <p class="meta">Goal: Cinematic dark fantasy concept art with moody chiaroscuro lighting</p>
+    <p><strong>Revised Prompt:</strong></p>
+    <pre>A lone, shadowy figure stands in a dimly lit, ancient library, surrounded by towering shelves filled with forbidden texts. Dust motes dance in a single shaft of moonlight piercing the gloom. The atmosphere is heavy with a sinister, devotional aura. Rendered in a highly detailed concept art style, with dark, dramatic lighting and a limited, muted color palette by Brom, Zdzislaw Beksinski, and H.R. Giger. Moody chiaroscuro lighting, deep shadows, and a dark, atmospheric mood.</pre>
+    <p class="meta">Model: Midjourney/DALL-E | Style: Dark Concept Art | Mood: Sinister & Gothic</p>
+    <p class="meta"><strong>Notes:</strong> Artist references (Brom, Beksinski, Giger) are crucial for achieving the specific dark aesthetic. Mentioning "dust motes" and "single shaft of light" creates visual tension and focal points.</p>
+  </div>
+
+  <div class="card">
+    <h3>Whimsical Papercraft Globe Scene</h3>
+    <p class="meta">Goal: High-resolution origami/papercraft aesthetic with playful characters and intricate details</p>
+    <p><strong>Revised Prompt:</strong></p>
+    <pre>A whimsical origami papercraft scene featuring a panda and a minion dancing inside a transparent globe. The globe is filled with delicate, folded paper elements resembling a miniature world. The characters and their surroundings are meticulously crafted from paper, with crisp edges and vibrant colors. Stationery elements are subtly integrated into the environment. Shot with a soft focus, high-resolution 8K, 64-megapixel style, evoking a charming and detailed papercraft aesthetic reminiscent of the intricate designs by Robert J. Lang and T. J. Lou.</pre>
+    <p class="meta">Model: Midjourney/DALL-E | Style: Origami/Papercraft | Resolution: 8K | Mood: Whimsical & Charming</p>
+    <p class="meta"><strong>Notes:</strong> Specifying "transparent globe," "crisp edges," and "soft focus" controls depth and material realism. Papercraft artists' names ground the aesthetic in recognizable style traditions.</p>
   </div>
 
 </section>
@@ -111,34 +135,27 @@ commercial product photography</pre>
   <h2>Video Prompt Examples</h2>
 
   <div class="card">
-    <h3>Cinematic Street Scene</h3>
-    <p class="meta">Goal: Short atmospheric video clip</p>
-    <pre>Slow cinematic tracking shot through a rain-soaked city street at night,
-neon reflections on pavement,
-shallow depth of field,
-moody lighting,
-realistic motion, film grain</pre>
-    <p class="meta">Model: Video Generator · Duration: 6–8s</p>
-    <p class="meta">Notes: Camera motion specified first to anchor the scene.</p>
+    <h3>Coming Soon</h3>
+    <p class="meta">Video prompt examples will be added in the next update.</p>
   </div>
 
 </section>
 
 <section>
-  <h2>Prompt Breakdown</h2>
+  <h2>Prompt Engineering Tips</h2>
 
   <div class="card">
-    <h3>Prompt Iteration Example</h3>
-    <p class="meta">Version 1</p>
-    <pre>Cinematic city street at night</pre>
-    <p class="meta">Issue: Too vague, inconsistent framing</p>
-    <p class="meta">Final Version</p>
-    <pre>Slow tracking shot, street-level perspective,
-wet pavement reflecting neon signage,
-controlled depth of field,
-consistent lighting, cinematic realism</pre>
-    <p class="meta">Result: Improved framing and repeatability</p>
+    <h3>Structure & Refinement</h3>
+    <p>Effective prompts follow a consistent pattern:</p>
+    <ul>
+      <li><strong>Subject/Scene:</strong> Clear description of the main subject and environment</li>
+      <li><strong>Mood & Atmosphere:</strong> Emotional tone, lighting, and ambiance</li>
+      <li><strong>Artistic Style:</strong> Specific references to artists, art movements, or mediums</li>
+      <li><strong>Technical Details:</strong> Resolution, aspect ratio, camera angles, and technical specifications</li>
+      <li><strong>Refinement:</strong> Iterative testing with specific adjustments to control output</li>
+    </ul>
   </div>
+
 </section>
 
 <section>
@@ -148,7 +165,7 @@ consistent lighting, cinematic realism</pre>
 </section>
 
 <footer>
-  © Your Name · AI Prompt Portfolio
+  © Your Name | AI Prompt Portfolio
 </footer>
 
 </body>
